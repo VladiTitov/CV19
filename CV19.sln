@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV19", "CV19\CV19.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{75E80095-666C-43E5-8A7B-249307CD685B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV19Console", "CV19Console\CV19Console.csproj", "{679FD778-E06C-4143-B960-4781B475D106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV19WPFTest", "CV19WPFTest\CV19WPFTest.csproj", "{883FBF0B-D941-4695-89BD-E785415BA24D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +21,21 @@ Global
 		{763DAD67-46AC-477A-8EDD-60E9175AA2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{763DAD67-46AC-477A-8EDD-60E9175AA2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{763DAD67-46AC-477A-8EDD-60E9175AA2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679FD778-E06C-4143-B960-4781B475D106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679FD778-E06C-4143-B960-4781B475D106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679FD778-E06C-4143-B960-4781B475D106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679FD778-E06C-4143-B960-4781B475D106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{883FBF0B-D941-4695-89BD-E785415BA24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883FBF0B-D941-4695-89BD-E785415BA24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{883FBF0B-D941-4695-89BD-E785415BA24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{883FBF0B-D941-4695-89BD-E785415BA24D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{679FD778-E06C-4143-B960-4781B475D106} = {75E80095-666C-43E5-8A7B-249307CD685B}
+		{883FBF0B-D941-4695-89BD-E785415BA24D} = {75E80095-666C-43E5-8A7B-249307CD685B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5953F59-7BDA-4142-B609-45DBC65341A2}
