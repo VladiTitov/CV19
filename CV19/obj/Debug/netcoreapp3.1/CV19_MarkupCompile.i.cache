@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\App.xaml
-11151548125
+11895717287
 
-42018049487
+42108069008
 1921654412462
-MainWindow.xaml;
+Views\Windows\MainWindow.xaml;
 
-False
+True
 
