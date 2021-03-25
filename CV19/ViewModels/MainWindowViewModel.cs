@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Input;
+using CV19.Infrastructure.Commands;
 using CV19.Models;
 using CV19.ViewModels.Base;
 
@@ -45,10 +45,9 @@ namespace CV19.ViewModels
         {
             #region Commands
 
-            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanOnCloseApplicationCommandExecuted);
+            CloseApplicationCommand = new LambdaCommands(OnCloseApplicationCommandExecuted, CanOnCloseApplicationCommandExecuted);
 
             #endregion
-
 
             var data_points = new List<DataPoint>((int)(360 / 0.1));
             for (var x = 0d; x <= 360; x += 0.1)
