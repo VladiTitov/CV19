@@ -1,0 +1,13 @@
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\bin\Debug\netcoreapp3.1\CV19Console.exe
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\bin\Debug\netcoreapp3.1\CV19Console.deps.json
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\bin\Debug\netcoreapp3.1\CV19Console.runtimeconfig.json
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\bin\Debug\netcoreapp3.1\CV19Console.runtimeconfig.dev.json
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\bin\Debug\netcoreapp3.1\CV19Console.dll
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\bin\Debug\netcoreapp3.1\CV19Console.pdb
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.csprojAssemblyReference.cache
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.AssemblyInfoInputs.cache
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.AssemblyInfo.cs
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.csproj.CoreCompileInputs.cache
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.dll
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.pdb
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19Console\obj\Debug\netcoreapp3.1\CV19Console.genruntimeconfig.cache

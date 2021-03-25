@@ -27,7 +27,7 @@ namespace CV19.ViewModels
 
         public string Title
         {
-            get => Title;
+            get => title;
             set => Set(ref title, value);
         }
 
