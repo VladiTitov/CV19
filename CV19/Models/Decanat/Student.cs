@@ -15,6 +15,8 @@ namespace CV19.Models.Decanat
         public DateTime BirtDay { get; set; }
 
         public  double Rating { get; set; }
+
+        public string Description { get; set; }
     }
 
     internal class Group
