@@ -1,15 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using CV19.Infrastructure.Commands;
 using CV19.Models;
+using CV19.Models.Decanat;
 using CV19.ViewModels.Base;
 
 namespace CV19.ViewModels
 {
     class MainWindowViewModel : ViewModel
     {
+        /*---------------------------------------------------------------------------------------------*/
+
+        #region Студенты и группы
+
+        public ObservableCollection<Group> Groups { get; }
+
+        #region Выбранная группа
+
+        private Group _selectedGroup;
+
+        public Group SelectedGroup
+        {
+            get => _selectedGroup;
+            set => Set(ref _selectedGroup, value);
+        }
+        #endregion
+
+        #endregion
+
+
         #region Тестовые данные координат
 
         private IEnumerable<DataPoint> _testDataPoints;
@@ -33,14 +56,23 @@ namespace CV19.ViewModels
 
         #endregion
 
+        /*---------------------------------------------------------------------------------------------*/
+
+        #region Commands
+
         #region CloseApplicationCommand
         public ICommand CloseApplicationCommand { get; }
 
         private bool CanOnCloseApplicationCommandExecuted(object p) => true;
 
         private void OnCloseApplicationCommandExecuted(object p) => Application.Current.Shutdown();
-        #endregion 
+        #endregion
 
+        #endregion
+
+        /*---------------------------------------------------------------------------------------------*/
+
+        #region Logic
         public MainWindowViewModel()
         {
             #region Commands
@@ -48,6 +80,8 @@ namespace CV19.ViewModels
             CloseApplicationCommand = new LambdaCommands(OnCloseApplicationCommandExecuted, CanOnCloseApplicationCommandExecuted);
 
             #endregion
+
+            #region Координаты
 
             var data_points = new List<DataPoint>((int)(360 / 0.1));
             for (var x = 0d; x <= 360; x += 0.1)
@@ -59,7 +93,36 @@ namespace CV19.ViewModels
             }
 
             TestDataPoints = data_points;
+
+            #endregion
+
+            #region Студенты
+            var student_index = 1;
+
+            var students = Enumerable.Range(1, 10).Select(i => new Student
+            {
+                Name = $"Name {student_index}",
+                Surname = $"Surname {student_index}",
+                Patronymic = $"Patronymic {student_index++}",
+                BirtDay = DateTime.Now,
+                Rating = 0
+
+            });
+
+            var groups = Enumerable.Range(1, 20).Select(i => new Group
+            {
+                Name = $"Group {i}",
+                Students = new ObservableCollection<Student>(students)
+            });
+
+            Groups = new ObservableCollection<Group>(groups);
+
+            #endregion
+
         }
+
+        #endregion
+
 
     }
 }
