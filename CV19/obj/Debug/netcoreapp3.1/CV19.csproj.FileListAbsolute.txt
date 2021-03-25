@@ -1,0 +1,5 @@
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\CV19.csprojAssemblyReference.cache
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\Views\Windows\MainWindow.g.cs
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\CV19_MarkupCompile.cache
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\CV19_MarkupCompile.lref
