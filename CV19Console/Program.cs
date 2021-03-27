@@ -46,10 +46,7 @@ namespace CV19Console
 
                 yield return (country_name, province, counts);
             }
-
-
         }
-
 
         static void Main(string[] args)
         {

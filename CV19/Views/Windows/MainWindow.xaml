@@ -39,33 +39,65 @@
                         <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Header="Groups">
-                        <ListBox ItemsSource="{Binding Groups}" SelectedIndex="0"
-                                 DisplayMemberPath="Name"
-                                 SelectedItem="{Binding SelectedGroup}"/>
-                    </GroupBox>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Grid.Row="0" Header="Groups">
+                            <ListBox ItemsSource="{Binding Groups}" SelectedIndex="0"
+                                     DisplayMemberPath="Name"
+                                     SelectedItem="{Binding SelectedGroup}"/>
+                        </GroupBox>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Height="Auto" Width="Auto" 
+                                    Padding="5" Margin="5 0"
+                                    Command="{Binding CreateNewGroupCommand}">
+                                <fa:ImageAwesome Icon="Solid_UserPlus" Height="15"
+                                                 Foreground="LimeGreen"/>
+                            </Button>
+                            <Button Height="Auto" Width="Auto" 
+                                    Padding="5" Margin="5 0"
+                                    Command="{Binding DeleteGroupCommand}" CommandParameter="{Binding SelectedGroup}">
+                                <fa:ImageAwesome Icon="Solid_UserMinus" Height="15"
+                                                 Foreground="Red"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                        
+
+                    
                     <GroupBox Grid.Column="1" Header="{Binding SelectedGroup.Name,
                         FallbackValue='Студенты', 
                         TargetNullValue='Группа не выбрана'}">
                         <DataGrid ItemsSource="{Binding SelectedGroup.Students}" 
                                   AutoGenerateColumns="False"
-                                  IsReadOnly="True"
                                   GridLinesVisibility="Vertical"
                                   VerticalGridLinesBrush="DarkGray"
                                   AlternatingRowBackground="LightCyan"
                                   >
 
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}" Width="Auto"/>
-                                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="Auto"/>
-                                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="Auto"/>
-                                <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}" Width="Auto"/>
+                                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}" Width="Auto" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="Auto" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="Auto" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Рейтинг" Binding="{Binding Rating}" Width="Auto" IsReadOnly="True"/>
                                 <DataGridTemplateColumn Header="Дата рождения">
-                                    <DataGridTemplateColumn.CellTemplate>
+                                    <!--<DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate DataType="decanat:Student">
                                             <DatePicker SelectedDate="{Binding BirtDay}"/>
                                         </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>-->
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate DataType="decanat:Student">
+                                            <TextBlock Text="{Binding BirtDay, StringFormat='dd.MM.yyyy'}"/>
+                                        </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
+                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                        <DataTemplate DataType="decanat:Student">
+                                            <DatePicker SelectedDate="{Binding BirtDay}"></DatePicker>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellEditingTemplate>
                                 </DataGridTemplateColumn>
                                     <!--<DataGridTextColumn Header="Дата рождения" Binding="{Binding BirtDay, StringFormat=dd.MM.yyyy}" Width="Auto"/>-->
                                 <DataGridTextColumn Header="Заметки" Binding="{Binding Description}" Width="*"/>

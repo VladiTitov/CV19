@@ -68,6 +68,40 @@ namespace CV19.ViewModels
         private void OnCloseApplicationCommandExecuted(object p) => Application.Current.Shutdown();
         #endregion
 
+        #region Команда добавления
+
+        public  ICommand CreateNewGroupCommand { get; }
+
+        private bool CanCreateGroupCommandExecute(object p) => true;
+
+        private void OnCreateGroupCommandExecute(object p)
+        {
+            var group_max_index = Groups.Count + 1;
+            var new_group = new Group
+            {
+                Name = $"Группа {group_max_index}",
+                Students = new ObservableCollection<Student>()
+            };
+
+            Groups.Add(new_group);
+        }
+
+        #endregion
+
+        #region Команда удаления
+
+        public  ICommand DeleteGroupCommand { get; }
+
+        private bool CanDeleteGroupCommandExecute(object p) => p is Group group && Groups.Contains(group);
+
+        private void OnDeleteGroupCommandExecute(object p)
+        {
+            if (!(p is Group group)) return;
+            Groups.Remove(group);
+        }
+
+        #endregion
+
         #endregion
 
         /*---------------------------------------------------------------------------------------------*/
@@ -78,6 +112,10 @@ namespace CV19.ViewModels
             #region Commands
 
             CloseApplicationCommand = new LambdaCommands(OnCloseApplicationCommandExecuted, CanOnCloseApplicationCommandExecuted);
+
+            CreateNewGroupCommand = new LambdaCommands(OnCreateGroupCommandExecute, CanCreateGroupCommandExecute);
+
+            DeleteGroupCommand = new LambdaCommands(OnDeleteGroupCommandExecute, CanDeleteGroupCommandExecute);
 
             #endregion
 
