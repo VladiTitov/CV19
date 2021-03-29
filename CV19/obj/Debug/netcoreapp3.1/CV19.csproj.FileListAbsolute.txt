@@ -24,3 +24,4 @@ C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\C
 C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\CV19.genruntimeconfig.cache
 C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\CV19.csprojAssemblyReference.cache
 C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Legion.DESKTOP-0QV9H6M\source\repos\CV19\CV19\obj\Debug\netcoreapp3.1\Resources\Styles\Buttons.baml
