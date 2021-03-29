@@ -21,7 +21,7 @@
                 <MenuItem Header="Выход" Command="{Binding CloseApplicationCommand}"/>
             </MenuItem>
             <MenuItem Header="О программе">
-                <MenuItem Header="Помощь"></MenuItem>
+                <MenuItem Header="Помощь"/>
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
@@ -50,23 +50,20 @@
                                      SelectedItem="{Binding SelectedGroup}"/>
                         </GroupBox>
                         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button Height="Auto" Width="Auto" 
-                                    Padding="5" Margin="5 0"
+                            <Button Style="{StaticResource {x:Type Button}}"
                                     Command="{Binding CreateNewGroupCommand}">
                                 <fa:ImageAwesome Icon="Solid_UserPlus" Height="15"
                                                  Foreground="LimeGreen"/>
                             </Button>
-                            <Button Height="Auto" Width="Auto" 
-                                    Padding="5" Margin="5 0"
-                                    Command="{Binding DeleteGroupCommand}" CommandParameter="{Binding SelectedGroup}">
+                            <Button Style="{StaticResource {x:Type Button}}" 
+                                    Command="{Binding DeleteGroupCommand}" 
+                                    CommandParameter="{Binding SelectedGroup}">
                                 <fa:ImageAwesome Icon="Solid_UserMinus" Height="15"
                                                  Foreground="Red"/>
                             </Button>
                         </StackPanel>
                     </Grid>
-                        
 
-                    
                     <GroupBox Grid.Column="1" Header="{Binding SelectedGroup.Name,
                         FallbackValue='Студенты', 
                         TargetNullValue='Группа не выбрана'}">
